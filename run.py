@@ -1,7 +1,8 @@
 from app import app
+from config.config import config
 
-
+ 
 if __name__ == '__main__':
-    app.run(debug=True, port=2021)
+    app.run(debug=config.DEBUG, port=config.PORT)
 
 # TODO: Import config file variables 
