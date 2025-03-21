@@ -9,4 +9,4 @@ class Config:
 
 config = Config()
 
-# TODO: fix the issues with the params
+
