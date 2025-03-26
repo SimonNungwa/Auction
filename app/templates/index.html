@@ -1,19 +1,81 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Auction Auctions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <header class="flex justify-around py-4 items-center">
-        <section><a href="/">Logo</a></section>
-        <ul class="flex space-x-3">
-            <li>Services</li>
-            <li><a href="about">About</a></li>
-            <li>Contact us</li>
+  <body class="min-h-screen flex flex-col">
+    <header class="flex justify-between items-center py-4 px-6 bg-gray-100">
+      <section class="text-xl font-bold">
+        <a href="/" class="hover:text-gray-600">Auction Auctions</a>
+      </section>
+      
+      <nav>
+        <ul class="flex space-x-6">
+          <li><a href="#services" class="hover:text-gray-600">Services</a></li>
+          <li><a href="/about" class="hover:text-gray-600">About</a></li>
+          <li><a href="#contact" class="hover:text-gray-600">Contact Us</a></li>
         </ul>
-        <button class="border border-black rounded-full p-4 text-white bg-black"><a href="login">Login</a></button>
+      </nav>
+
+      <div class="flex items-center space-x-4">
+        <form action="" class="relative">
+          <input 
+            type="search" 
+            name="search" 
+            placeholder="Search auctions..." 
+            class="border border-gray-300 rounded-full py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+        </form>
+        <button class="bg-black text-white rounded-full px-6 py-2 hover:bg-gray-800 transition-colors">
+          <a href="/login">Login</a>
+        </button>
+      </div>
     </header>
+
+    <!-- mobile nav -->
+    <section class="hidden-md ">
+      <ul>
+        <li>Home</li>
+        <li>Search</li>
+        <li>(add something)</li>
+        <li>Sign in</li>
+      </ul>
+    </section>
+
+    <main class="flex-grow">
+      <section class="flex justify-center items-center h-[calc(100vh-8rem)]">
+        <h1 class="text-5xl md:text-6xl font-bold text-center px-4">
+          Welcome to Auction Auctions
+        </h1>
+      </section>
+    </main>
+
+    <footer class="bg-gray-100 py-6 px-6">
+      <div class="flex justify-between items-center max-w-7xl mx-auto">
+        <ul class="flex space-x-6">
+          <li><a href="/about" class="hover:text-gray-600">About Us</a></li>
+          <li><a href="/blog" class="hover:text-gray-600">Blog</a></li>
+          <li><a href="#contact" class="hover:text-gray-600">Contact Us</a></li>
+        </ul>
+
+        <section class="flex space-x-4">
+          <a href="#" class="text-gray-600 hover:text-gray-800">
+            <!-- Twitter/X icon placeholder -->
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+          <a href="#" class="text-gray-600 hover:text-gray-800">
+            <!-- Facebook icon placeholder -->
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
+            </svg>
+          </a>
+        </section>
+      </div>
+    </footer>
   </body>
 </html>
