@@ -12,7 +12,8 @@
         <a href="/" class="hover:text-gray-600">Auction Auctions</a>
       </section>
       
-      <nav>
+      <!-- Desktop Navigation (hidden on mobile) -->
+      <nav class="hidden md:flex items-center space-x-6">
         <ul class="flex space-x-6">
           <li><a href="#services" class="hover:text-gray-600">Services</a></li>
           <li><a href="/about" class="hover:text-gray-600">About</a></li>
@@ -20,7 +21,7 @@
         </ul>
       </nav>
 
-      <div class="flex items-center space-x-4">
+      <div class="hidden md:flex items-center space-x-4">
         <form action="" class="relative">
           <input 
             type="search" 
@@ -35,27 +36,55 @@
       </div>
     </header>
 
-    <!-- mobile nav -->
-    <section class="hidden-md ">
-      <ul>
-        <li>Home</li>
-        <li>Search</li>
-        <li>(add something)</li>
-        <li>Sign in</li>
+    <!-- Mobile Bottom Navigation (hidden on desktop) -->
+    <nav class="md:hidden fixed bottom-0 left-0 right-0 bg-gray-100 border-t border-gray-200 py-2">
+      <ul class="flex justify-around items-center">
+        <li class="flex flex-col items-center">
+          <a href="/" class="flex flex-col items-center hover:text-gray-600">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <span class="text-xs">Home</span>
+          </a>
+        </li>
+        <li class="flex flex-col items-center">
+          <a href="#search" class="flex flex-col items-center hover:text-gray-600">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+            <span class="text-xs"><a href="search">Search</a></span>
+          </a>
+        </li>
+        <li class="flex flex-col items-center">
+          <a href="#services" class="flex flex-col items-center hover:text-gray-600">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 14v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+            </svg>
+            <span class="text-xs"><a href="services">Services</a></span>
+          </a>
+        </li>
+        <li class="flex flex-col items-center">
+          <a href="/login" class="flex flex-col items-center hover:text-gray-600">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+            </svg>
+            <span class="text-xs">Sign in</span>
+          </a>
+        </li>
       </ul>
-    </section>
+    </nav>
 
-    <main class="flex-grow">
-      <section class="flex justify-center items-center h-[calc(100vh-8rem)]">
-        <h1 class="text-5xl md:text-6xl font-bold text-center px-4">
+    <main class="flex-grow pb-16 md:pb-0">
+      <section class="flex justify-center items-center h-[calc(100vh-8rem)] px-4">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-center">
           Welcome to Auction Auctions
         </h1>
       </section>
     </main>
 
-    <footer class="bg-gray-100 py-6 px-6">
-      <div class="flex justify-between items-center max-w-7xl mx-auto">
-        <ul class="flex space-x-6">
+    <footer class="bg-gray-100 py-20 px-6">
+      <div class="flex flex-col sm:flex-row justify-between items-center max-w-7xl mx-auto space-y-4 sm:space-y-0">
+        <ul class="flex flex-row sm:flex-row space-x-4 text-center items-center">
           <li><a href="/about" class="hover:text-gray-600">About Us</a></li>
           <li><a href="/blog" class="hover:text-gray-600">Blog</a></li>
           <li><a href="#contact" class="hover:text-gray-600">Contact Us</a></li>
@@ -63,13 +92,11 @@
 
         <section class="flex space-x-4">
           <a href="#" class="text-gray-600 hover:text-gray-800">
-            <!-- Twitter/X icon placeholder -->
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
               <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
             </svg>
           </a>
           <a href="#" class="text-gray-600 hover:text-gray-800">
-            <!-- Facebook icon placeholder -->
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
               <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
             </svg>
