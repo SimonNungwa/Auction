@@ -1,0 +1,42 @@
+body {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+
+.form {
+    border: 1px solid black;
+    padding: 40px;
+    display: inline-flex;
+    flex-direction: column;
+    margin: 10px;
+    gap: 1em;
+    height: fit-content;
+}
+
+input {
+    padding: 10px;
+    width: 300px;
+}
+
+button {
+    padding: 10px;
+    background: black;
+    color: white;
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+}
+
+.opt {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
