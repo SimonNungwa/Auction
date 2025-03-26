@@ -4,16 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="input.css">
+    <link rel="stylesheet" href="../static/css/login.css">
 </head>
 <body>
     
     <form class="form">
-        <label for="uname">Username</label>
-        <input type="text" name="uname" id="uname" placeholder="Enter your Username">
+        <h1>Log in</h1>
+        <section class="detail">
+            <label for="uname">Username</label>
+            <input type="text" name="uname" id="uname" placeholder="Enter your Username">
+        </section>
+        
+        <section class="detail">
+            <label for="pword">Password</label>
+            <input type="password" name="pword" id="pword" placeholder="Enter your password">    
+        </section>
 
-        <label for="pword"></label>
-        <input type="password" name="pword" id="pword">
+        <button><a href="/">Log in</a></button>
+
+        <section class="opt">
+            <p>Forgot password? <a href="recover">Recover</a></p>
+            <p>Already have an account? <a href="signup">Sign up</a></p>
+        </section>
     </form>
 </body>
 </html>
