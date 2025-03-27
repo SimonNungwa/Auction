@@ -9,10 +9,9 @@ body
 .form
 {
     border: 1px solid black;
-    padding: 40px;
+    padding: 5%;
     display: inline-flex;
     flex-direction: column;
-    margin: 10px;
     gap: 1em;
     height: fit-content;
 }
