@@ -1,32 +1,27 @@
-from flask import render_template
-from app import app
+from flask import Blueprint, render_template
 
+routes = Blueprint('routes', __name__)
 
-@app.route('/')
+@routes.route('/')
 def index():
     return render_template('index.html')
 
-
-@app.route('/about')
+@routes.route('/about')
 def about():
     return render_template('about.html')
 
-
-@app.route('/recover')
+@routes.route('/recover')
 def recover():
     return render_template('recover.html')
 
-
-@app.route('/signup')
+@routes.route('/signup')
 def signup():
     return render_template('signup.html')
 
-
-@app.route('/search')
+@routes.route('/search')
 def search():
     return render_template('searchPage.html')
 
-
-@app.route('/services')
+@routes.route('/services')
 def services():
     return render_template('services.html')
