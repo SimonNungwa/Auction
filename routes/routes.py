@@ -1,5 +1,4 @@
-from flask import Flask, render_template, request, url_for, redirect
-from auth import auth
+from flask import render_template, request, url_for, redirect
 from app import app
 
 
@@ -26,3 +25,4 @@ def search():
 @app.route('/services')
 def services():
     return render_template('services.html')
+
