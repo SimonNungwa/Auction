@@ -1,6 +1,4 @@
-# .github/workflows/python-app.yml
-
-name: Python application
+name: Python Application
 
 on:
   push:
@@ -13,15 +11,14 @@ permissions:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4  # Updated to latest version
 
     - name: Set up Python 3.10
-      uses: actions/setup-python@v3
+      uses: actions/setup-python@v4  # Updated to latest version
       with:
         python-version: "3.10"
 
@@ -33,10 +30,10 @@ jobs:
 
     - name: Lint with flake8
       run: |
-        # stop the build if there are Python syntax errors or undefined names
+        # Check for critical errors (syntax errors, undefined names)
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
-        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+        # Run full linting, but allow warnings for review
+        flake8 . --count --max-complexity=10 --max-line-length=88 --statistics
 
     - name: Test with pytest
       run: |
