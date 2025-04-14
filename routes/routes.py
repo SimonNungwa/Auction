@@ -26,7 +26,3 @@ def search():
 @app.route('/services')
 def services():
     return render_template('services.html')
-
-# @app.route('/login')
-# def login():
-#     if 
