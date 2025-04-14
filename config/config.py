@@ -1,13 +1,13 @@
-import os
-from dotenv import load_dotenv
+from flask import Flask
+from config import config  # Import the config instance
 
+app = Flask(__name__)
 
-load_dotenv()
+# Apply the config to the app
+app.config.from_object(config)
 
+# Import your routes and other app-related logic
+from app import routes
 
-class Config:
-    DEBUG = os.getenv('DEBUG', 'TRUE').lower() in ['true', '1']
-    PORT = int(os.getenv('PORT', 2024))
-
-
-config = Config()
+if __name__ == '__main__':
+    app.run(debug=config.DEBUG, port=config.PORT)
