@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+    environment:
+      - FLASK_ENV=development
+    depends_on:
+      - tailwind
+
+  tailwind:
+    image: node:18
+    working_dir: /app
+    volumes:
+      - .:/app
+    command: npm run watch
+    environment:
+      - NODE_ENV=development
