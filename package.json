@@ -1,0 +1,31 @@
+{
+  "name": "auction",
+  "version": "1.0.0",
+  "description": "Auction and bidding web application",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tailwindcss -i ./app/static/css/src/input.css -o ./app/static/css/output.css --minify",
+    "watch": "npx tailwindcss -i ./app/static/css/src/input.css -o ./app/static/css/output.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.13",
+    "postcss": "^8.4.47",
+    "autoprefixer": "^10.4.20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SimonNungwa/Auction.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/SimonNungwa/Auction/issues"
+  },
+  "homepage": "https://github.com/SimonNungwa/Auction#readme"
+}
